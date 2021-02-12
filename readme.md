@@ -1,6 +1,7 @@
 **DESK OF CARDS PROJECT**
 
 By: Miguel Rosa
+
 Licensed: MIT
 
 **Installation instructions (add to local maven reporsitory):**
@@ -13,9 +14,10 @@ mvn clean install
 
 Include the next xml snipet inside your _dependencies_ tags in the pom.xml file:
 
-
+```
 <dependency>
         <groupId>com.thepinkdev</groupId>
         <artifactId>deck-of-cards</artifactId>
         <version>0.0.1-SNAPSHOT</version>
 </dependency>
+```
