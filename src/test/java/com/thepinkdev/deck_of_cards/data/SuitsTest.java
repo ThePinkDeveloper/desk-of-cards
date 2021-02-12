@@ -4,23 +4,23 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class SuitsTests {
+public class SuitsTest {
 
     @Test
     public void itShouldOnlyBeFourSuitsTest() {
-    	int numberOfSuits = Suit.getAListOfAllDefaultSuits().size();
+    	int numberOfSuits = PokerSuit.getAListOfAllPokerSuits().size();
         assertEquals(4, numberOfSuits);
     }
     
     @Test
     public void itShouldBeHeartsTheFirstValueOfTheListTest() {
-    	Suit firstSuitOfTheList = Suit.getAListOfAllDefaultSuits().get(0);
-    	assertEquals(Suit.HEARTS, firstSuitOfTheList);
+    	PokerSuit firstSuitOfTheList = PokerSuit.getAListOfAllPokerSuits().get(0);
+    	assertEquals(PokerSuit.HEARTS, firstSuitOfTheList);
     }
 	
     @Test
     public void itShouldBeKnownTheNameOfASuitTest() {
-    	String heartName = Suit.HEARTS.getSuitName();
+    	String heartName = PokerSuit.HEARTS.getSuitName();
     	assertEquals("hearts", heartName);
     }
 }

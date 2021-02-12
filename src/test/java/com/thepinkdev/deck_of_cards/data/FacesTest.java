@@ -4,23 +4,23 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class FacesTests {
+public class FacesTest {
 
     @Test
     public void itShouldOnlyBeThirteenFacesTest() {
-    	int numberOfFaces = Face.getAListOfAllDefaultFaces().size();
+    	int numberOfFaces = PokerFace.getAListOfAllPokerFaces().size();
         assertEquals(13, numberOfFaces);
     }
     
     @Test
     public void itShouldBeAceTheFirstValueOfTheListTest() {
-    	Face firstFaceOfTheList = Face.getAListOfAllDefaultFaces().get(0);
-    	assertEquals(Face.ACE, firstFaceOfTheList);
+    	PokerFace firstFaceOfTheList = PokerFace.getAListOfAllPokerFaces().get(0);
+    	assertEquals(PokerFace.ACE, firstFaceOfTheList);
     }
 	
     @Test
     public void itShouldBeKnownTheNameOfAFaceTest() {
-    	String nameOfTwo = Face.TWO.getFaceName();
+    	String nameOfTwo = PokerFace.TWO.getFaceName();
     	assertEquals("2", nameOfTwo);
     }
 }

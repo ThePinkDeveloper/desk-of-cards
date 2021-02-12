@@ -6,18 +6,18 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.thepinkdev.deck_of_cards.data.Face;
-import com.thepinkdev.deck_of_cards.data.Suit;
+import com.thepinkdev.deck_of_cards.data.PokerFace;
+import com.thepinkdev.deck_of_cards.data.PokerSuit;
 import com.thepinkdev.deck_of_cards.exceptions.CardWithoutFaceException;
 import com.thepinkdev.deck_of_cards.exceptions.CardWithoutSuitException;
 
-public class CardTests {
+public class CardTest {
 
     @Test
     public void itShouldNotBeEqualsTwoCardsWithTheSameFaceAndSuitTest() {
 		try {
-			Card card1 = Card.createACardByFaceAndSuit(Face.ACE, Suit.SPADES);
-			Card card2 = Card.createACardByFaceAndSuit(Face.ACE, Suit.SPADES);
+			Card card1 = Card.createAPokerStyleCardByFaceAndSuit(PokerFace.ACE, PokerSuit.SPADES);
+			Card card2 = Card.createAPokerStyleCardByFaceAndSuit(PokerFace.ACE, PokerSuit.SPADES);
 			assertNotEquals(card1, card2);
 		} catch (CardWithoutFaceException | CardWithoutSuitException e) {
 			e.printStackTrace();
@@ -26,12 +26,12 @@ public class CardTests {
     
     @Test(expected = CardWithoutFaceException.class)
     public void itShouldBeExpectedACardWithoutFaceExceptionTest() throws CardWithoutFaceException, CardWithoutSuitException {
-    	Card.createACardByFaceAndSuit(null, Suit.SPADES);
+    	Card.createAPokerStyleCardByFaceAndSuit(null, PokerSuit.SPADES);
     }
     
     @Test(expected = CardWithoutSuitException.class)
     public void itShouldBeExpectedACardWithoutSuitExceptionTest() throws CardWithoutFaceException, CardWithoutSuitException {
-    	Card.createACardByFaceAndSuit(Face.EIGHT, null);
+    	Card.createAPokerStyleCardByFaceAndSuit(PokerFace.EIGHT, null);
     }
     
     @Test
@@ -41,7 +41,7 @@ public class CardTests {
     	String cardName = null;
     	
     	try {
-    	Card card = Card.createACardByFaceAndSuit(Face.EIGHT, Suit.CLUBS);
+    	Card card = Card.createAPokerStyleCardByFaceAndSuit(PokerFace.EIGHT, PokerSuit.CLUBS);
     	cardName = card.getCardName();
     	} catch (Exception e) {
     		e.printStackTrace();

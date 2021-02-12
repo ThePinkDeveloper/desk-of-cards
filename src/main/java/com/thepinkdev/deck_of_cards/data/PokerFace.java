@@ -3,7 +3,7 @@ package com.thepinkdev.deck_of_cards.data;
 import java.util.Arrays;
 import java.util.List;
 
-public enum Face {
+public enum PokerFace {
 
 	ACE("ACE"),
 	TWO("2"),
@@ -21,14 +21,26 @@ public enum Face {
 	
 	private String faceName;
 	
-	private Face(String faceName) {
+	/**
+	 * Private constructor to avoid external manipulation
+	 * @param faceName
+	 */
+	private PokerFace(String faceName) {
 		this.faceName = faceName;
 	}
 	
-	public static List<Face> getAListOfAllDefaultFaces() {
-		return Arrays.asList(Face.values());
+	/**
+	 * Retrieves a list of all poker faces
+	 * @return
+	 */
+	public static List<PokerFace> getAListOfAllPokerFaces() {
+		return Arrays.asList(PokerFace.values());
 	}
 
+	/**
+	 * Retrieves the name of the selected face
+	 * @return
+	 */
 	public String getFaceName() {
 		return faceName;
 	}
