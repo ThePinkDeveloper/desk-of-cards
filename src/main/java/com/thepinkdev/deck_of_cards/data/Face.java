@@ -1,6 +1,9 @@
 package com.thepinkdev.deck_of_cards.data;
 
-public enum Faces {
+import java.util.Arrays;
+import java.util.List;
+
+public enum Face {
 
 	ACE("ACE"),
 	TWO("2"),
@@ -18,15 +21,16 @@ public enum Faces {
 	
 	private String faceName;
 	
-	private Faces(String faceName) {
+	private Face(String faceName) {
 		this.faceName = faceName;
+	}
+	
+	public static List<Face> getAListOfAllDefaultFaces() {
+		return Arrays.asList(Face.values());
 	}
 
 	public String getFaceName() {
 		return faceName;
 	}
-
-	public void setFaceName(String faceName) {
-		this.faceName = faceName;
-	}
+	
 }

@@ -1,6 +1,9 @@
 package com.thepinkdev.deck_of_cards.data;
 
-public enum Suits {
+import java.util.Arrays;
+import java.util.List;
+
+public enum Suit {
 	HEARTS("hearts"),
 	SPADES("spades"),
 	CLUBS("clubs"),
@@ -8,15 +11,15 @@ public enum Suits {
 	
 	private String suitName;
 	
-	private Suits(String suitName) {
+	private Suit(String suitName) {
 		this.suitName = suitName;
+	}
+	
+	public static List<Suit> getAListOfAllDefaultSuits() {
+		return Arrays.asList(Suit.values());
 	}
 
 	public String getSuitName() {
 		return suitName;
-	}
-
-	public void setSuitName(String suitName) {
-		this.suitName = suitName;
-	}		
+	}	
 }
