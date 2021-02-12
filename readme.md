@@ -11,7 +11,7 @@ mvn clean install
 
 **To add this proyect as a maven dependency to another project:**
 
-Include the next xml snipet inside your _dependencies_ tags:
+Include the next xml snipet inside your _dependencies_ tags in the pom.xml file:
 
 
 <dependency>
